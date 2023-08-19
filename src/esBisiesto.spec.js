@@ -16,6 +16,9 @@ describe("Es Bisiesto ", () => {
   it("El 1700 no deberia considerarse como anio bisiesto ya que Todos los años divisibles por 100 pero no por 400 NO son años bisiestos", () => {
     expect(esBisiesto(1700)).toEqual(false);
  });
-
+ it("El 2008 deberia considerarse como anio bisiesto ya que Todos los años divisibles por 4 pero no por 100 SON años bisiestos  ", () => {
+  expect(esBisiesto(2008)).toEqual(true);
+ });
+ 
 });
 
