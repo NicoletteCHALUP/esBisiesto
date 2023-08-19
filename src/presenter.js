@@ -1,15 +1,17 @@
-import sumar from "./sumador";
+import esBisiesto from "./esBisiesto.js";
 
 const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const form = document.querySelector("#bisiesto-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  if(esBisiesto(firstNumber)==true){
+    div.innerHTML = "<p> SI es bisiesto </p>";
+  }else{
+    div.innerHTML = "<p>NO es bisiesto </p>";
+  }
+  
 });
